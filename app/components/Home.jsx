@@ -1534,7 +1534,7 @@ export default function Home() {
 
             <div className="video-backgrounde">
               <video className="backgrounde-video" loop autoPlay muted playsInline>
-                <source src="videos/Flowing+Neon+Curve+Lines_1.mp4" type="video/mp4" />
+                <source src="https://darker-supply.s3.us-east-005.backblazeb2.com/Flowing+Neon+Curve+Lines_1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
