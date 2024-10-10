@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <main className="relative bg-black overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif" }}>
 <div className="bg-black fixed top-0 w-full z-50">
-      <header className="w-full max-w-[79rem] h-[7rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
+      <header className="w-full max-w-[79rem] h-[5rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
         <nav className="flex justify-between items-center h-full px-4">
         <div className="left-images">
                 <a href="/">
@@ -193,7 +193,7 @@ export default function Home() {
     
 
 
-      <div className="w-full mx-auto relative z-[30] flex flex-col items-center justify-center lg:mt-[5rem] mt-[9rem] sm:mt-1">
+      <div className="w-full mx-auto relative z-[30] flex flex-col items-center justify-center lg:mt-[5rem] mt-[6rem] sm:mt-1">
   <div className="text-[12px] text-white font-bold bg-[#0d0d0d66] py-[7px] rounded-3xl px-3 flex items-center mt-[1rem] fadeInUp border border-white border-opacity-10">
     <span className="online h-2 w-2 bg-green-500 rounded-full mr-2 animate-pulseShrinkGrow"></span>
     Ab sofort: Direkte CRM Anbindung
@@ -1501,9 +1501,9 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-5 flex items-center text-[40px] md:text-[72px] text-[#f5f5f8] font-[500] tracking-[-0.04em] leading-[1.1em]">
+      <div className="mt-[2rem] flex items-center text-[36px] md:text-[72px] text-[#f5f5f8] font-[500] tracking-[-0.04em] leading-[1.1em]">
         <h1 className="text-center">Jetzt Leads</h1>
-        <span className="text-center font-serif italic tracking-[0em] font-[400] mt-2 md:ml-[12px]">
+        <span className="text-center font-serif italic tracking-[0em] font-[400] ml-2 md:ml-[12px]">
           anfragen.
         </span>
       </div>
