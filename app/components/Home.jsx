@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <main className="relative bg-black overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif" }}>
 <div className="lg:bg-black bg-[#0a0a0a] fixed top-0 w-full z-50">
-      <header className="w-full max-w-[79rem] h-[4rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
+      <header className="w-full max-w-[79rem] h-[3rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
         <nav className="flex justify-between items-center h-full px-4">
         <div className="left-images">
                 <a href="/">
