@@ -13,8 +13,6 @@ import translations from '../../public/translations.json';
 
 export default function Home() {
     const country = useGeolocation();
-    const [selectedRegion, setSelectedRegion] = useState("");
-    const [selectedLead, setSelectedLead] = useState("");
     const [texts, setTexts] = useState(translations.EN);
 
     const [isClicked, setIsClicked] = useState(false);
@@ -837,7 +835,7 @@ export default function Home() {
                                 height="16"
                                 fill="currentColor"
                                 stroke="currentColor"
-                                stroke-width="17" 
+                                strokeWidth="17" 
                                 className="text-[#fff]"
                             >
                                 <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
@@ -868,7 +866,7 @@ export default function Home() {
                                 height="16"
                                 fill="currentColor"
                                 stroke="currentColor"
-                                stroke-width="17" 
+                                strokeWidth="17" 
                                 className="text-[#fff]"
                             >
                                 <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
@@ -897,7 +895,7 @@ export default function Home() {
                                 height="16"
                                 fill="currentColor"
                                 stroke="currentColor"
-                                stroke-width="17" 
+                                strokeWidth="17" 
                                 className="text-[#fff]"
                             >
                                 <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
