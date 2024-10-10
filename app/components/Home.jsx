@@ -829,7 +829,7 @@ export default function Home() {
                   <span>Integrations</span>
                   <div className="flex items-start justify-between w-[23rem] mt-2 py-4 rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                          <span className="text-[#fff] text-[16px]">✔</span> 
+                      <span className="text-[16px] !text-white">✔</span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
@@ -847,7 +847,7 @@ export default function Home() {
 
                   <div className="flex items-start justify-between w-[23rem] rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                          <span className="text-white text-[16px]">✔</span> {/* Use a checkmark character */}
+                      <span className="text-[16px] !text-white">✔</span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
@@ -865,7 +865,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start justify-between w-[23rem] py-4 rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                          <span className="text-white text-[16px]">✔</span> {/* Use a checkmark character */}
+                      <span className="text-[16px] !text-white">✔</span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
