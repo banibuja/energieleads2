@@ -79,7 +79,7 @@ export default function Home() {
 
    
   return (
-    <main className="relative bg-black overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif" }}>
+<main className="relative bg-black overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif", minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
 <div className="lg:bg-black bg-[#0a0a0a] fixed top-0 w-full z-50">
       <header className="w-full max-w-[79rem] h-[4rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
         <nav className="flex justify-between items-center h-full px-4">
@@ -176,7 +176,10 @@ export default function Home() {
           </ul>
         </div>
       </header>
-    </div>   <a href="#form">
+    </div> 
+    <div className="content relative z-20 bg-black">
+
+      <a href="#form">
 
       <button className="mt-[1.5rem] z-[1001] fixed right-0 top-[38rem] lg:top-[48rem] mr-3 px-6 py-2 bg-[#fbcf44] text-white rounded-[12px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out sm:px-4 sm:py-2 flex items-center">
   Jetzt Testen
@@ -1486,56 +1489,58 @@ export default function Home() {
         </div>
       </div>
     </div>
-
-<div className="footer-overfloww mt-[3rem]">
-  <div className="footer-wrapper">
-    <div className="footer-container flex flex-col items-center justify-center text-center p-5">
-      <div className="flex justify-center">
-        <Image
-          src="https://framerusercontent.com/images/6wm2hJw0JcUgHfEryGifeXzTQ.png"
-          alt="Logo"
-          className="w-[150px] h-auto"
-          width="300"
-          height="200"
-          
-        />
-      </div>
-
-      <div className="mt-[2rem] flex items-center text-[36px] md:text-[72px] text-[#f5f5f8] font-[500] tracking-[-0.04em] leading-[1.1em]">
-        <h1 className="text-center">Jetzt Leads</h1>
-        <span className="text-center font-serif italic tracking-[0em] font-[400] ml-2 md:ml-[12px]">
-          anfragen.
-        </span>
-      </div>
-
-      <h2 className="text-lg mt-5 text-center">
-        Worauf wartest du? <br /> Jetzt mit Energieleads skalieren!
-      </h2>
-
-      <button className="test-button mt-6 px-5 py-2 bg-[#fbcf44] text-white rounded-lg hover:bg-[#e0b234] transition duration-300">
-        Jetzt durchstarten
-      </button>
-
-      <div className="legal lg:mr-[30rem] w-full max-w-[50rem] px-4 text-[white] flex flex-col md:flex-row justify-between items-center p-4">
-        <div className="left text-[14px] text-center md:text-left">
-          ©2024 EnergieLeads
-        </div>
-        <div className="center flex justify-center space-x-4 text-[14px] text-[#ababab] mt-2 md:mt-0">
-          <span>Impressum</span>
-          <span>AGB & Widerruf</span>
-          <span>Datenschutz</span>
-        </div>
-      </div>
     </div>
 
-    <div className="video-backgrounde">
-      <video className="backgrounde-video" loop autoPlay muted playsInline>
-        <source src="./videos/Flowing+Neon+Curve+Lines_1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
+    <footer className="relative z-10">
+    <div className="footer-overfloww
+    ">
+          <div className="footer-wrapper sticky bottom-0 bg-black text-white">
+            <div className="footer-container flex flex-col items-center justify-center text-center p-5">
+              <div className="flex justify-center">
+                <Image
+                  src="https://framerusercontent.com/images/6wm2hJw0JcUgHfEryGifeXzTQ.png"
+                  alt="Logo"
+                  className="w-[150px] h-auto"
+                  width="300"
+                  height="200" />
+              </div>
+
+              <div className="mt-5 flex items-center text-[40px] md:text-[72px] text-[#f5f5f8] font-[500] tracking-[-0.04em] leading-[1.1em]">
+                <h1 className="text-center">Jetzt Leads</h1>
+                <span className="text-center font-serif italic tracking-[0em] font-[400] mt-2 md:ml-[12px]">
+                  anfragen.
+                </span>
+              </div>
+
+              <h2 className="text-lg mt-5 text-center">
+                Worauf wartest du? <br /> Jetzt mit Energieleads skalieren!
+              </h2>
+
+              <button className="test-button mt-6 px-5 py-2 bg-[#fbcf44] text-white rounded-lg hover:bg-[#e0b234] transition duration-300">
+                Jetzt durchstarten
+              </button>
+
+              <div className="legal lg:mr-[30rem] w-full max-w-[50rem] px-4 text-[white] flex flex-col md:flex-row justify-between items-center p-4">
+                <div className="left text-[14px] text-center md:text-left">
+                  ©2024 EnergieLeads
+                </div>
+                <div className="center flex justify-center space-x-4 text-[14px] text-[#ababab] mt-2 md:mt-0">
+                  <span>Impressum</span>
+                  <span>AGB & Widerruf</span>
+                  <span>Datenschutz</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="video-backgrounde">
+              <video className="backgrounde-video" loop autoPlay muted playsInline>
+                <source src="videos/Flowing+Neon+Curve+Lines_1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 
     </main>

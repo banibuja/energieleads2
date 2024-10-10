@@ -228,6 +228,34 @@ select:focus {
 }
 
 
+.footer-wrapper {
+  position: fixed;
+  z-index: 10; 
+  background-color: black;
+  text-align: center;
+  margin-bottom: 3rem;
+  /* padding: 1rem 0; */
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 60vh; 
+}
+
+.content {
+  flex: 1; 
+  padding-bottom: 3rem; 
+  box-shadow: 0 32px 64px 24px #0a0a0a; 
+
+  z-index: 30;
+
+}
+
+
 
 
 
