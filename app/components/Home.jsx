@@ -6,10 +6,16 @@ import ScrollingProviders from './ScrollingProviders';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive'; 
 import Image from 'next/image';
+import useGeolocation from '../hooks/useGeolocation';
+import translations from '../../public/translations.json';
 
 
 
 export default function Home() {
+    const country = useGeolocation();
+    const [selectedRegion, setSelectedRegion] = useState("");
+    const [selectedLead, setSelectedLead] = useState("");
+    const [texts, setTexts] = useState(translations.EN);
 
     const [isClicked, setIsClicked] = useState(false);
     const [multiLeadPrice, setMultiLeadPrice] = useState(49); 
@@ -18,6 +24,15 @@ export default function Home() {
     const [openIndex, setOpenIndex] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
+
+  useEffect(() => {
+    if (country === "DE") {
+        setTexts(translations.DE);
+    } else {
+        setTexts(translations.EN);
+    }
+}, [country]);
 
 
   const toggleAccordion = (index) => {
@@ -70,25 +85,28 @@ export default function Home() {
 <div className="bg-black fixed top-0 w-full z-50">
       <header className="w-full max-w-[79rem] h-[7rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
         <nav className="flex justify-between items-center h-full px-4">
-          <div className="left-images">
-            <Image
-              src="https://framerusercontent.com/images/6wm2hJw0JcUgHfEryGifeXzTQ.png"
-              alt="Logo"
-              className="w-[150px] h-auto"
-              width="150"
-              height="200"
-            />
-          </div>
+        <div className="left-images">
+                <a href="/">
+                    <Image
+                    src="https://framerusercontent.com/images/6wm2hJw0JcUgHfEryGifeXzTQ.png"
+                    alt="Logo"
+                    className="w-[150px] h-auto"
+                    width="150"
+                    height="200"
+                    />
+                </a>
+                </div>
 
           <div className="right-images flex items-center">
             {/* Menu for larger screens */}
-            <ul className="hidden md:flex space-x-4 items-center text-[14px] text-[#fff] font-medium tracking-[-0.02em]">
-              <li>Produkt</li>
-              <li>Features</li>
-              <li>Preise</li>
+            <ul className="hidden md:flex cursor space-x-4 items-center text-[14px] text-[#fff] font-medium tracking-[-0.02em]">
+              <li >  <a href="#leads">{texts.header.product}</a> </li>
+              <li><a href="#integrations">{texts.header.features}</a></li>
+              <li><a href="#preise">{texts.header.price}</a></li>
               <li>
                 <button className="ml-4 px-4 py-2 bg-[#fbcf44] text-white rounded-[10px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out">
-                  Jetzt anfragen
+                <a href="#form">{texts.header.request}</a>
+
                 </button>
               </li>
             </ul>
@@ -149,18 +167,19 @@ export default function Home() {
           }`}
         >
           <ul className="flex flex-col space-y-4 items-start text-[14px] text-[#fff] font-medium tracking-[-0.02em]">
-            <li>Produkt</li>
-            <li>Features</li>
-            <li>Preise</li>
+              <li>  <a href="#leads">{texts.header.product}</a> </li>
+              <li><a href="#integrations">{texts.header.features}</a></li>
+              <li><a href="#preise">{texts.header.price}</a></li>
             <li>
               <button className="w-[25rem] md:w-auto px-4 py-2 bg-[#fbcf44] text-white rounded-[10px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out">
-                Unverbindlich testen
+              <a href="#form">{texts.header.request}</a>
               </button>
             </li>
           </ul>
         </div>
       </header>
-    </div>
+    </div>   <a href="#form">
+
       <button className="mt-[1.5rem] z-[1001] fixed right-0 top-[38rem] lg:top-[48rem] mr-3 px-6 py-2 bg-[#fbcf44] text-white rounded-[12px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out sm:px-4 sm:py-2 flex items-center">
   Jetzt Testen
   <svg className="w-6 h-6 text-[#fff] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -169,6 +188,8 @@ export default function Home() {
 
 
 </button>
+
+</a>
 
 
     
@@ -198,9 +219,12 @@ export default function Home() {
     Eigenheimbesitzer/innen an Fachfirmen.
   </div>
 
+  <a href="#form">
   <button className="mt-[1.5rem] ml-4 px-5 py-2 bg-[#fbcf44] text-white rounded-[12px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out sm:px-4 sm:py-2">
     Unverbindlich testen
   </button>
+</a>
+
 
  
 </div>
@@ -382,17 +406,25 @@ export default function Home() {
             </div>      )}
     </div>      
      
-  <div className="video-background w-full h-full absolute top-0 left-0">
-    <video className="background-video w-full h-full object-cover" loop autoPlay muted playsInline>
-      <source src="./videos/background-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div className="video-blur-overlay"></div>
-  </div>
+    <div className="video-background w-full h-full absolute top-0 left-0">
+  <video 
+    className="background-video w-full h-full object-cover" 
+    loop 
+    autoPlay 
+    muted 
+    playsInline 
+    preload="auto"
+  >
+    <source src="./videos/background-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div className="video-blur-overlay"></div>
+</div>
+
 </div>
 
 
-<div className="leads mt-[5rem] h-auto flex flex-col items-center"> 
+<div id="leads" className="leads mt-[5rem] h-auto flex flex-col items-center"> 
     <div className="text-[#f5f5f8] border border-[rgba(255,255,255,0.1)] text-[14px] bg-[#0d0d0d66] px-[12px] py-[5px] rounded-[60px] mb-4"> 
       Unsere Leads
     </div>
@@ -560,7 +592,7 @@ export default function Home() {
   
   
         {/* Column 3 Content */}
-        <div className="flex ">
+        <div  className="flex ">
 
   
         <div className="relative  border border-[rgba(255,255,255,0.1)] bg-[#0d0d0dcc] text-[#f5f5f8] p-0 rounded-[30px] w-[37rem] h-[21rem] lg:w-[37rem] lg:h-[24rem] backdrop-blur-[24px] mx-4 md:mx-0 overflow-hidden">
@@ -769,7 +801,7 @@ export default function Home() {
 
 
 
-<div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[80rem] mx-auto px-4">
+<div id="integrations" className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[80rem] mx-auto px-4">
 
 
 <div className="integrations mt-[3rem] lg:mt-[7rem] h-auto flex flex-col items-start w-full lg:w-[50%]">
@@ -1080,7 +1112,7 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="flex justify-center items-center space-x-3 bg-black p-4">
+    <div id="preise" className="flex justify-center items-center space-x-3 bg-black p-4">
       <button className="py-2 px-2 text-white rounded-full text-[18px]">Einmalig</button>
 
       <div className="relative">
@@ -1270,7 +1302,7 @@ export default function Home() {
 
 
 
-<div className="form mt-[4rem] h-auto flex flex-col items-center">
+<div id="form" className="form mt-[4rem] h-auto flex flex-col items-center">
       <div className="text-[#f5f5f8] border border-[rgba(255,255,255,0.1)] text-[14px] bg-[#0d0d0d66] px-[12px] py-[5px] rounded-[60px] shadow-custom mb-4">
         Preis
       </div>
