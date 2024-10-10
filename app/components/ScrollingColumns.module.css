@@ -25,7 +25,7 @@
 }
 
 .listItem {
-  margin: 10px 0; 
+  margin: 20px 0; 
 }
 
 .card {
@@ -72,7 +72,7 @@
 
   .column {
     flex: 0 0 calc(30% - 20px); 
-    margin: 10px; 
+    margin: 20px; 
   }
 }
 /* @media (max-width: 768px) {
