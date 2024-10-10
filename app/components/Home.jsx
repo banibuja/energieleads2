@@ -829,7 +829,21 @@ export default function Home() {
                   <span>Integrations</span>
                   <div className="flex items-start justify-between w-[23rem] mt-2 py-4 rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                      <span className="text-[16px] !text-white">✔</span>
+                      <span className="text-[16px] !text-white">
+                                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                                width="20"
+                                height="16"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="17" 
+                                className="text-[#fff]"
+                            >
+                                <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
+                            </svg>
+
+                      </span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
@@ -847,7 +861,18 @@ export default function Home() {
 
                   <div className="flex items-start justify-between w-[23rem] rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                      <span className="text-[16px] !text-white">✔</span>
+                      <span className="text-[16px] !text-white">  <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                                width="20"
+                                height="16"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="17" 
+                                className="text-[#fff]"
+                            >
+                                <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
+                            </svg></span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
@@ -865,7 +890,18 @@ export default function Home() {
                   </div>
                   <div className="flex items-start justify-between w-[23rem] py-4 rounded-[12px] px-3">
                       <div className="flex items-center justify-center w-[25px] mt-[0.5rem] h-[20px] bg-[#fbcf44] rounded-[6px] mr-2">
-                      <span className="text-[16px] !text-white">✔</span>
+                      <span className="text-[16px] !text-white">  <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                                width="20"
+                                height="16"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="17" 
+                                className="text-[#fff]"
+                            >
+                                <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z" />
+                            </svg></span>
                       </div>
 
                       <div className="text-white text-xl font-bold w-[50px] h-auto rounded-full flex items-center justify-center">
