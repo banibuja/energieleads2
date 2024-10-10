@@ -249,7 +249,7 @@ export default function Home() {
         <Image
           src="https://framerusercontent.com/images/6uLTtWZEBfrKKmeWmWvlN7r4qiU.png?scale-down-to=512"
           alt="Dashboard"
-          className="w-[23rem] h-auto mt-[1rem]" 
+          className="w-[23rem] h-auto mt-[2.3rem]" 
            width="300"
           height="200"
         />
