@@ -229,10 +229,11 @@ export default function Home() {
 
  
 </div>
+<div className="relative z-[20] flex flex-col items-center justify-center w-full">
 
 
-      <div className="flex justify-center mt-[2rem] lg:mt-[3rem]">
-  <div className="prov-cont w-[55rem]">
+<div className="flex relative z-[30] justify-center mt-[2rem] lg:mt-[3rem]">
+<div className="prov-cont w-[55rem]">
     <div className="providers flex justify-center flex-col items-center w-[90%] mx-auto"> 
       <p className='text-[#ababab] text-center text-[12px]'>Solaranbieter, die uns bereits vertrauen:</p> 
       <ScrollingProviders />
@@ -244,7 +245,6 @@ export default function Home() {
 
 
 
-      <div className="relative z-[20] flex flex-col items-center justify-center w-full">
       <div className="z-30">
       {isMobile ? (
         <Image
