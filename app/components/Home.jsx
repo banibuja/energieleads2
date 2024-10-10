@@ -80,8 +80,8 @@ export default function Home() {
    
   return (
     <main className="relative bg-black overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif" }}>
-<div className="bg-black fixed top-0 w-full z-50">
-      <header className="w-full max-w-[79rem] h-[5rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
+<div className="lg:bg-black bg-[#0a0a0a] fixed top-0 w-full z-50">
+      <header className="w-full max-w-[79rem] h-[4rem] py-1 mx-auto sm:h-[4.8rem] transition duration-300">
         <nav className="flex justify-between items-center h-full px-4">
         <div className="left-images">
                 <a href="/">
@@ -169,7 +169,7 @@ export default function Home() {
               <li><a href="#integrations">{texts.header.features}</a></li>
               <li><a href="#preise">{texts.header.price}</a></li>
             <li>
-              <button className="w-[25rem] md:w-auto px-4 py-2 bg-[#fbcf44] text-white rounded-[10px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out">
+              <button className="w-[20rem] md:w-auto px-4 py-2 bg-[#fbcf44] text-white rounded-[10px] hover:ring-4 hover:ring-[rgba(102,72,250,0.5)] transition duration-300 ease-in-out">
               <a href="#form">{texts.header.request}</a>
               </button>
             </li>
