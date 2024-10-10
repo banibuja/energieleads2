@@ -1507,7 +1507,7 @@ export default function Home() {
 
               <div className="mt-5 flex items-center text-[40px] md:text-[72px] text-[#f5f5f8] font-[500] tracking-[-0.04em] leading-[1.1em]">
                 <h1 className="text-center">Jetzt Leads</h1>
-                <span className="text-center font-serif italic tracking-[0em] font-[400] mt-2 md:ml-[12px]">
+                <span className="text-center font-serif italic tracking-[0em] font-[400] ml-[12px] md:ml-[12px]">
                   anfragen.
                 </span>
               </div>
