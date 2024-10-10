@@ -11,6 +11,23 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        satoshi: ["Satoshi", "Satoshi Placeholder", "sans-serif"],
+        serif: ['"Instrument Serif"', 'serif'],
+        sans: ['"DM Sans"', 'sans-serif'],
+      },
+      keyframes: {
+        pulseShrinkGrow: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.7)' }, 
+        },
+      },
+      animation: {
+        pulseShrinkGrow: 'pulseShrinkGrow 1.5s ease-in-out infinite',
+      },
+      backdropBlur: {
+        '24': '24px', 
+      },
     },
   },
   plugins: [],
