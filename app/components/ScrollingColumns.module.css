@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+  background-color: black;
+  overflow: hidden; 
+  width: 60rem; 
+  margin: 0 auto; 
+  mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px; 
+  height: 100%; 
+  overflow-y: hidden; 
+  position: relative;
+}
+
+.scroll {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 10px 0; 
+}
+
+.card {
+  background-color: #0d0d0d;
+  color: #ababab;
+  padding: 20px; 
+  border-radius: 15px; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+.nameContainer small {
+  color: #ababab; 
+  font-size: 13px;
+}
+
+.stars {
+  color: white; 
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 10px; 
+}
+
+.logo {
+  width: 35px; 
+  height: auto; 
+  margin-right: 5px; 
+  margin-top: 5px;
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  margin-left: 10px; 
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%; 
+  }
+
+  .column {
+    flex: 0 0 calc(30% - 20px); 
+    margin: 10px; 
+  }
+}
+/* @media (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+    height: 40vh; 
+  }
+
+  .column {
+    flex: 0 0 100%; 
+    margin: 10px 0; 
+    width: 20rem;
+  }
+} */
+
+

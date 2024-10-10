@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  z-index: 4;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.scrollingContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scrollInfinite 55s linear infinite; 
+}
+
+.listItem {
+  margin: auto;
+  margin-right: 30px;  
+}
+
+.image {
+  width: 120px;  
+  height: auto; 
+  margin: auto;
+}
+
+.scroll img { 
+  max-width: none; 
+  height: auto; 
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}

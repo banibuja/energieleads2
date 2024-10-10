@@ -1,0 +1,37 @@
+{
+    "EN": {
+      "header": {
+        "product": "Product",
+        "features": "Features",
+        "price": "Price",
+        "request": "Request Now"
+      },
+      "about": {
+        "title": "About Us",
+        "description": "We are a company based in..."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "phone": "Phone",
+        "email": "Email"
+      }
+    },
+    "DE": {
+      "header": {
+        "product": "Produkt",
+        "features": "Features",
+        "price": "Preise",
+        "request": "Anfrage"
+      },
+      "about": {
+        "title": "Über uns",
+        "description": "Wir sind ein Unternehmen..."
+      },
+      "contact": {
+        "title": "Kontaktiere uns",
+        "phone": "Telefon",
+        "email": "E-Mail"
+      }
+    }
+  }
+  

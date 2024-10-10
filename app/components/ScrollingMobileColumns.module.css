@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    /* mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%); */
+    
+      mask-image: linear-gradient(to right, 
+        rgba(0, 0, 0, 0) 0%,      
+        rgb(0, 0, 0) 10%,         
+        rgb(0, 0, 0) 90%,         
+        rgba(0, 0, 0, 0) 100%);  
+        mask-image: linear-gradient(to left, 
+        rgba(0, 0, 0, 0) 0%,      
+        rgb(0, 0, 0) 10%,         
+        rgb(0, 0, 0) 90%,         
+        rgba(0, 0, 0, 0) 100%);   
+    
+    
+    
+  }
+  
+  .column {
+    display: flex; 
+    flex-direction: row; 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    margin: 10px;
+    width: 100%;
+    position: relative;
+    /* height: 43rem; */
+  }
+  
+  .scroll {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: max-content; 
+  }
+  
+  .listItem {
+    margin: 10px;
+  }
+  
+  .card {
+    background-color: #0d0d0d;
+    color: #ababab;
+    /* padding: 20px; */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px; /* Fixed width for each card */
+    padding: 20px;
+  }
+  
+  .nameContainer small {
+    color: #ababab;
+    font-size: 13px;
+  }
+  
+  .stars {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .footer {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    width: 35px;
+    height: auto;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      height: 57rem; 
+      justify-content: flex-start; 
+      align-items: flex-start;
+    }
+  
+    .column {
+      flex-direction: column;
+      /* overflow-x: scroll;  */
+      width: 100%; 
+    }
+  
+    .card {
+      width: 383px; 
+    }
+  
+    .listItem {
+      margin: 20px; 
+      /* padding: 10px; */
+    }
+  
+    .logo {
+      /* width: 25px; */
+    }
+  
+    .nameContainer small {
+      font-size: 12px; 
+    }
+  
+    .stars {
+      margin-bottom: 5px; 
+      padding: 2px;
+    }
+    .ScrollingMobileColumns_logo__s6Baj{
+      width: none;
+    }
+ 
+   
+
+    .text{
+      /* color: red; */
+      padding: 15px 10px 10px 0px;
+      margin-bottom: 15px;
+    }
+
+
+  }
+  
