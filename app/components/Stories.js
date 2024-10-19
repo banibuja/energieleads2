@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './ScrollingColumns.module.css';
+import useGeolocation from '../hooks/useGeolocation';
+
 
 const ScrollingColumns = () => {
   const data = [
@@ -14,6 +16,40 @@ const ScrollingColumns = () => {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const scrollRef3 = useRef(null);
+  const country = useGeolocation();
+  const [texts, setTexts] = useState({});
+
+  const loadTranslations = async (langCode) => {
+    try {
+      const translations = await import(`../../public/translations/${langCode}.json`);
+      setTexts(translations); 
+    } catch (error) {
+      console.error(`Could not load translations for ${langCode}:`, error);
+    }
+  };
+
+  
+  useEffect(() => {
+    switch (country) {
+      case "DE":
+        loadTranslations('de');
+        break;
+      case "PT":
+        loadTranslations('pt');
+        break;
+      case "FR":
+        loadTranslations('fr');
+        break;
+      case "NL":
+        loadTranslations('nl');
+        break;
+      case "IT":
+        loadTranslations('it');
+        break;
+      default:
+        loadTranslations('en'); 
+    }
+  }, [country]);
 
   useEffect(() => {
     const scroll1 = scrollRef1.current;
